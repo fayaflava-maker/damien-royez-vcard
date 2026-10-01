@@ -1,12 +1,11 @@
 {
   "name": "Damien ROYEZ VCARD",
   "short_name": "Damien ROYEZ",
-  "description": "Carte de visite digitale de Damien ROYEZ",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#071a2e",
-  "theme_color": "#071a2e",
+  "background_color": "#061b31",
+  "theme_color": "#061b31",
   "icons": [
     {
       "src": "icon-192.png",
