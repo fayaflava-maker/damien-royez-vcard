@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Damien ROYEZ VCARD</title>
+<meta name="description" content="Carte de visite digitale de Damien ROYEZ, conseiller immobilier Pic Saint-Loup.">
+<meta name="theme-color" content="#071a2e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Damien ROYEZ">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+  <header>
+    <div class="lgm">LGM<span>IMMOBILIER</span></div>
+    <div class="serenite">En toute<br><strong>sérénité</strong></div>
+  </header>
+
+  <section class="hero">
+    <div class="photo"><img src="damien-royez.jpg" alt="Damien ROYEZ"></div>
+    <div class="identity">
+      <h1>Damien <b>ROYEZ</b></h1>
+      <p>Votre conseiller immobilier<br><strong>Pic Saint-Loup</strong></p>
+    </div>
+  </section>
+
+  <h2>Parce que chaque projet est unique.</h2>
+
+  <a class="save" href="damien-royez.vcf" download>Enregistrer mon contact</a>
+
+  <nav class="actions" aria-label="Contacts">
+    <a href="tel:+33778253065"><span>☎</span><small>Appeler</small></a>
+    <a href="sms:+33778253065"><span>✉</span><small>SMS</small></a>
+    <a href="mailto:damien.royez@lgm-immobilier.fr"><span>@</span><small>E-mail</small></a>
+    <button id="share" type="button"><span>↗</span><small>Partager</small></button>
+  </nav>
+
+  <div class="social">
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  <p class="contact">07 78 25 30 65 · damien.royez@lgm-immobilier.fr</p>
+</main>
+
+<script>
+document.getElementById('share').addEventListener('click', async () => {
+  const data={title:'Damien ROYEZ VCARD',text:'Damien ROYEZ – Conseiller immobilier Pic Saint-Loup',url:location.href};
+  if(navigator.share){try{await navigator.share(data)}catch(e){}}
+  else {await navigator.clipboard.writeText(location.href); alert('Lien copié !');}
+});
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js'))}
+</script>
+</body>
+</html>
