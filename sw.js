@@ -1,1 +1,3 @@
-const C='damien-vcard-20261016';self.addEventListener('install',e=>{self.skipWaiting()});self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C).map(x=>caches.delete(x)))));self.clients.claim()});self.addEventListener('fetch',e=>{e.respondWith(fetch(e.request).catch(()=>caches.match(e.request)))})
+self.addEventListener('install',()=>self.skipWaiting());
+self.addEventListener('activate',event=>{event.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('damien-vcard-')).map(key=>caches.delete(key)))),self.clients.claim()]))});
+// Accès réseau normal : la nouvelle carte ne reste pas bloquée en cache.

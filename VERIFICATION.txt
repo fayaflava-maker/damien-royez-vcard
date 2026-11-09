@@ -1,0 +1,8 @@
+Contrôles effectués :
+- Huit zones cliquables recalées sur la nouvelle image, positions et dimensions contrôlées.
+- Téléphone, SMS, e-mail : destinations conservées.
+- Fichier contact présent et format vCard contrôlé.
+- Partage : logique testée pour partage natif, copie du lien et secours manuel.
+- Facebook et Instagram répondent HTTP 200.
+Limites : aucun test de clic dans un navigateur disponible ; applications téléphone/SMS/e-mail à essayer sur votre mobile après mise en ligne.
+Le site recommandations renvoie HTTP 403 à notre vérification automatisée : son ouverture reste à confirmer depuis votre téléphone. Son adresse originale est conservée.
